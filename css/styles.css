@@ -1,48 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-size: 16px;
-  color: #fff;
-  background-color: #FFFFFF;
-  font-family: 'Oxygen', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/** HEADER **/
-#header-nav {
-  background-color: #f6b319;
-  border-radius: 0;
-  border: 0;
+.heading-title {
+    color: BLACK;
+    /* text-align: center; */
 }
 
-#logo-img {
-  background: url('../images/restaurant-logo_large.png') no-repeat;
-  width: 150px;
-  height: 150px;
-  margin: 10px 15px 10px 0;
+.container {
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
-.navbar-brand {
-  padding-top: 25px;
+section {
+    border: 1px solid black;
+    background-color: #cdf5a7 ;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 200px;
+    color: black;
+    position: relative;
+    overflow: auto;
 }
 
-.navbar-brand h1 { /* Restaurant name */
-  font-family: 'Lora', serif;
-  color: #557c3e;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #222;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: .75;
+#SHAWARMA {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 30%;
+    margin-left: 70%;
+    font-weight: bold;
+    font-size: 125%;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 5px;
+    background-color: #45B39D ;
 }
-.navbar-brand a:hover, .navbar-brand a:focus {
-  text-decoration: none;
+
+#TACO {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 30%;
+    margin-left: 70%;
+    font-weight: bold;
+    font-size: 125%;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 5px;
+    background-color: #D98880;
 }
-.navbar-brand p { /* Kosher cert */
-  color: #000;
-  text-transform: uppercase;
-  font-size: .7em;
-  margin-top: 15px;
+
+#VADAPAV {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 30%;
+    margin-left: 70%;
+    font-weight: bold;
+    font-size: 125%;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 5px;
+    background-color: #C39BD3;
 }
-.navbar-brand p span { /* Star-K */
-  vertical-align: middle;
+
+p {
+    padding: 15px;
+    margin: 0;
+}
+
+/* Desktop view */
+@media(min-width: 992px) {
+    .box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-auto-flow: row;
+    }
+
+    .item1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .item3 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
+
+/* Tablet view */
+@media(min-width: 768px) and (max-width: 991px) {
+    .box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-auto-flow: row;
+    }
+
+    .item1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .item2 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .item3 {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-flow: column;
+    }
+
+    .item1 {
+        grid-column: 1;
+        grid-row: 1 / 2;
+    }
+
+    .item2 {
+        grid-column: 1;
+        grid-row: 2 / 3;
+    }
+
+    .item3 {
+        grid-column: 1;
+        grid-row: 3 / 4;
+    }
+}
+
+#nav-text a {
+    text-align: center;
 }
